@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+lmquickbench/__init__.py
+lmquickbench/cli.py
+lmquickbench.egg-info/PKG-INFO
+lmquickbench.egg-info/SOURCES.txt
+lmquickbench.egg-info/dependency_links.txt
+lmquickbench.egg-info/entry_points.txt
+lmquickbench.egg-info/requires.txt
+lmquickbench.egg-info/top_level.txt
+tests/test_basic.py

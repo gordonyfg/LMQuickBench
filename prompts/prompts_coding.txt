@@ -1,0 +1,10 @@
+Write a Python function that checks whether a given string is a palindrome.
+Write a Python class called Stack that implements push, pop, and peek operations.
+Write a Python function to calculate the factorial of a number recursively.
+Write a Python function that reverses a given string.
+Write a Python function that sums all elements in a list.
+Write a Python function that determines whether a given number is prime.
+Write a Python function that sorts a list of integers using the bubble sort algorithm.
+Write a Python function to find the maximum value in a list without using built-in functions.
+Write a Python function that merges two sorted lists into one sorted list.
+Write a Python function that counts the number of vowels in a given string.
