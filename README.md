@@ -1,5 +1,7 @@
 # LMQuickBench
 [![PyPI version](https://badge.fury.io/py/lmquickbench.svg)](https://badge.fury.io/py/lmquickbench)
+[![Tests](https://github.com/yfgordon/LMQuickBench/actions/workflows/ci.yml/badge.svg)](https://github.com/yfgordon/LMQuickBench/actions)
+
 
 A lightweight, flexible CLI tool for benchmarking local LLMs running on LM Studio.  
 Easily measure response latency, token usage, and generation speed.
