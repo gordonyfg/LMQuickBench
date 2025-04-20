@@ -14,6 +14,6 @@ setup(
     },
     author="Gordon Yeung",
     description="A lightweight CLI tool to benchmark local LLMs running on LM Studio.",
-    url="https://github.com/yourusername/LMQuickBench",
+    url="https://github.com/gordonyfg/LMQuickBench",
     python_requires='>=3.7',
 )

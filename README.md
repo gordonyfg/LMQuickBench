@@ -1,4 +1,5 @@
 # LMQuickBench
+[![PyPI version](https://badge.fury.io/py/lmquickbench.svg)](https://badge.fury.io/py/lmquickbench)
 
 A lightweight, flexible CLI tool for benchmarking local LLMs running on LM Studio.  
 Easily measure response latency, token usage, and generation speed.
@@ -21,7 +22,7 @@ Easily measure response latency, token usage, and generation speed.
 First, clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/LMQuickBench.git
+git clone https://github.com/gordonyfg/LMQuickBench.git
 cd LMQuickBench
 ```
 
@@ -116,7 +117,7 @@ See `.github/workflows/ci.yml` for workflow details.
 ## 🧑‍💻 Author
 
 Created by Gordon Yeung.  
-[GitHub Profile](https://github.com/yourusername)
+[GitHub Profile](https://github.com/gordonyfg)
 
 ---
 
