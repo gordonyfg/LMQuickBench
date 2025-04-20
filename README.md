@@ -1,59 +1,59 @@
 # LMQuickBench
+
 [![PyPI version](https://badge.fury.io/py/lmquickbench.svg)](https://badge.fury.io/py/lmquickbench)
 [![CI](https://github.com/gordonyfg/LMQuickBench/actions/workflows/ci.yml/badge.svg)](https://github.com/gordonyfg/LMQuickBench/actions/workflows/ci.yml)
 
-A lightweight, flexible CLI tool for benchmarking local LLMs running on LM Studio.  
-Easily measure response latency, token usage, and generation speed.
+A lightweight, flexible CLI tool for benchmarking local LLM models running through [LM Studio](https://lmstudio.ai/).  
+Measure latency, token usage, and output speed easily from your terminal.
 
 ---
 
 ## ✨ Features
 
-- Benchmark LLM models locally via LM Studio's inference server
-- Measure latency, token count, and tokens per second
-- Flexible server URL (support localhost, LAN, custom port)
-- Single prompt or batch prompts
-- Simple CLI usage
-- Ready for expansion (CSV output, Streamlit dashboard, etc.)
+- 📝 Single or batch prompt testing
+- 🔗 Dynamic server URL connection (localhost, LAN, docker, etc.)
+- ⏱️ Measure latency, tokens, tokens/sec
+- ⚡ Fast, simple, no heavy dependencies
+- 🚀 Pip-installable: easy to set up and use
+- 🛠️ Expandable design (CSV export, dashboard, future extensions)
 
 ---
 
 ## 📦 Installation
 
-First, clone the repository:
+Install LMQuickBench directly from PyPI:
+
+```bash
+pip install lmquickbench
+```
+
+Or install locally from source:
 
 ```bash
 git clone https://github.com/gordonyfg/LMQuickBench.git
 cd LMQuickBench
-```
-
-Then install locally:
-
-```bash
 pip install -e .
 ```
-
-✅ After install, the `lmquickbench` command is available globally.
 
 ---
 
 ## 🚀 Quick Start
 
-Make sure your LM Studio Inference Server is running!
+Make sure your LM Studio inference server is running!
 
-Example: Run a quick benchmark on the default LM Studio server (localhost:1234):
-
-```bash
-lmquickbench --prompt "What is Artificial Intelligence?"
-```
-
-Example: Use a custom server URL:
+Run a quick benchmark:
 
 ```bash
-lmquickbench --prompt "Explain recursion." --server_url "http://192.168.1.100:5678/v1/chat/completions"
+lmquickbench --prompt "Explain recursion." --max_tokens 512
 ```
 
-Example: Run a batch of prompts:
+Use a custom server URL:
+
+```bash
+lmquickbench --prompt "Summarize AI history." --server_url "http://192.168.1.100:5678/v1/chat/completions"
+```
+
+Run a batch benchmark using a prompts file:
 
 ```bash
 lmquickbench --promptfile prompts/prompts_coding.txt --max_tokens 512
@@ -65,63 +65,78 @@ lmquickbench --promptfile prompts/prompts_coding.txt --max_tokens 512
 
 | Option | Description | Default |
 |:---|:---|:---|
-| `--prompt` | A single prompt to test | |
-| `--promptfile` | A text file containing prompts (1 per line) | |
-| `--server_url` | LM Studio server endpoint URL | `http://localhost:1234/v1/chat/completions` |
-| `--max_tokens` | Maximum tokens for model output | 512 |
+| `--prompt` | A single prompt to benchmark | |
+| `--promptfile` | A text file with multiple prompts (one per line) | |
+| `--server_url` | URL of the LLM server endpoint | `http://localhost:1234/v1/chat/completions` |
+| `--max_tokens` | Maximum output tokens to generate | 512 |
 
 ---
 
 ## 📊 Example Output
 
 ```
-Testing prompt: What is AI?
+Testing prompt: Explain recursion.
 Model: qwen2.5-coder-14b-instruct, Latency: 4.56 sec, Tokens: 133, Tokens/sec: 29.14
-Output: AI stands for Artificial Intelligence...
+Output: Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem...
 ```
 
 ---
 
-## 🧪 Development
+## 🛡️ Development & Contribution
 
-To install development requirements:
+Clone the repo:
+
+```bash
+git clone https://github.com/gordonyfg/LMQuickBench.git
+cd LMQuickBench
+```
+
+Install development dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run unit tests:
+Run tests locally:
 
 ```bash
-pytest
+pytest -v
 ```
+
+We welcome contributions! Feel free to open issues, suggest improvements, or submit pull requests.
 
 ---
 
-## 📈 CI/CD
+## 📈 Continuous Integration
 
-LMQuickBench uses GitHub Actions for automatic testing on push and PRs.  
-See `.github/workflows/ci.yml` for workflow details.
+- GitHub Actions automatically run all tests on every push and PR.
+- See the [Actions tab](https://github.com/gordonyfg/LMQuickBench/actions) for CI status.
 
 ---
 
 ## 🛣️ Roadmap
 
-- CSV/JSON result output
-- System resource (CPU/RAM) monitoring
-- Streamlit dashboard visualization
-- PyPI release
-- Optional Homebrew installer
+- [ ] CSV/JSON export of benchmark results
+- [ ] Streamlit web dashboard visualization
+- [ ] System resource monitoring (CPU/RAM usage)
+- [ ] Integration with other LLM inference servers (e.g., Ollama, llama.cpp)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
 
 ---
 
 ## 🧑‍💻 Author
 
-Created by Gordon Yeung.  
-[GitHub Profile](https://github.com/gordonyfg)
+Created and maintained by [Gordon Yeung](https://github.com/gordonyfg).
 
 ---
 
-## 📄 License
+## 🌍 Links
 
-MIT License
+- [PyPI: lmquickbench](https://pypi.org/project/lmquickbench/)
+- [GitHub Repository](https://github.com/gordonyfg/LMQuickBench)
+- [LM Studio Website](https://lmstudio.ai/)
